@@ -1,0 +1,48 @@
+{
+  "name": "rx.experimental",
+  "title": "Reactive Extensions for JavaScript (RxJS)",
+  "description": "Library for composing asynchronous and event-based operations in JavaScript",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Reactive-Extensions/RxJS-Experimental",
+  "author": {
+    "name": "Microsoft Open Technologies",
+    "url": "https://github.com/Reactive-Extensions/RxJS-Experimental/blob/master/authors.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Reactive-Extensions/RxJS-Experimental.git"
+  },
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
+  "jam": {
+    "main": "rx.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-cli": "*",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-connect": "*",    
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-qunit": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-saucelabs": "*",
+    "grunt-conventional-changelog": "~1.0.0",
+    "load-grunt-tasks": "~0.2.0"    
+  },
+  "keywords": [
+    "LINQ",
+    "FRP",
+    "Reactive",
+    "Events"
+  ],
+  "main": "rx.node.js",
+  "scripts": {
+    "test": "grunt"
+  }
+}
