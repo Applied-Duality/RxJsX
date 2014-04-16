@@ -30,17 +30,17 @@
    * @returns {Boolean} true if found; false otherwise.
    */
   CompositeSubscriptionPrototype.remove = function (item) {
-    var shouldDispose = false;
+    var shouldUnsubscribe = false;
     if (!this.isUnsubscribed) {
       var idx = this.subscriptions.indexOf(item);
       if (idx !== -1) {
-        shouldDispose = true;
+        shouldUnsubscribe = true;
         this.subscriptions.splice(idx, 1);
         this.length--;
         item.unsubscribe();
       }
     }
-    return shouldDispose;
+    return shouldUnsubscribe;
   };
 
   /**

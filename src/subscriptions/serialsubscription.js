@@ -1,11 +1,11 @@
   /**
    * Represents a subscription resource whose underlying subscription resource can be replaced by another subscription resource, causing automatic disposal of the previous underlying subscription resource.
    */
-  var SerialSubscription = Rx.SerialSubscription = (function (super_) {
-    inherits(SerialSubscription, super_);
+  var SerialSubscription = Rx.SerialSubscription = (function (__super__) {
+    inherits(SerialSubscription, __super__);
 
     function SerialSubscription() {
-      super_.call(this, false);
+      __super__.call(this, false);
     }
 
     return SerialSubscription;
