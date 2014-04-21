@@ -1,7 +1,23 @@
   var Observer = Rx.Observer = (function () {
-    function Observer() {
+    function Constructor() {
 
     }
 
-    return Observer;
+    Constructor.prototype.makeSafe = function() {
+      return new SafeObserver(this);
+    };
+
+    return Constructor;
   }());
+
+  var SafeObserver = (function (__super__) {
+
+    function Constructor(downstream) {
+      this._downstream = downstream;
+    }
+
+    Constructor.prototype.onCompleted = function () {
+
+    };
+
+  }(Observer));
