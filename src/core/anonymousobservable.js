@@ -1,15 +1,17 @@
-  var AnonymouseObservable = Rx.internals.AnonymouseObservable = (function (__super__) {
+  var AnonymousObservable = Rx.AnonymousObservable = (function (__super__) {
 
-    inherits(Constructor, __super__)
+    inherits(AnonymousObservable, __super__);
 
-    function Constructor(unsafeSubecribe) {
-      this._unsafeSubscribe = unsafeSubecribe;
+    function AnonymousObservable(onSubscribe) {
+      guard(onSubscribe, 'onSubscribe');
+      __super__.call(this);
+      this._onSubscribe = onSubscribe;
     }
 
-    Constructor.prototype.unsafeSubecribe = function (observer) {
-      this._unsafeSubscribe(observer);
-    }
+    AnonymousObservable.prototype.onSubscribe(observer) {
+      this._onSubscribe(observer);
+    };
 
-    return Constructor;
+    return AnonymousObservable;
 
-  }(Observable));
+  }(ObservableBase));
